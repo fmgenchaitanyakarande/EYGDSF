@@ -1,0 +1,213 @@
+/* ==================== General Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+/* ==================== Navbar - Stylish & Interactive ==================== */
+.custom-navbar {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.custom-navbar .nav-link {
+    color: #fff !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.custom-navbar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: #ffdd57 !important;
+}
+
+/* ==================== Home Page - Frosted Glass Effect ==================== */
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("/public/home.png") no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.home-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.home-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.home-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.home-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.home-cta {
+    background: linear-gradient(135deg, #ff9d00, #ff2d00);
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.home-cta:hover {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #ffdd57, #ff4500);
+}
+
+/* ==================== Create & View Recipe Pages ==================== */
+.create-recipe-container, .view-recipes-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("/public/create.png") no-repeat center center/cover;
+}
+
+.create-recipe-overlay, .view-recipes-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.create-recipe-content, .view-recipes-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    color: white;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.create-recipe-content input, .create-recipe-content textarea, .view-recipes-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.create-recipe-content button, .view-recipes-content button {
+    background: linear-gradient(135deg, #ff6a00, #ff0080);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.create-recipe-content button:hover, .view-recipes-content button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ffdd57, #ff4500);
+}
+
+/* ==================== Animation Effects ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .home-cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .custom-navbar .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .custom-navbar .nav-link {
+        font-size: 1.1rem;
+    }
+
+    .create-recipe-content, .view-recipes-content {
+        padding: 30px;
+    }
+}
